@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Jost';
+    src: url('Jost-LightItalic.woff2') format('woff2'),
+        url('Jost-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('Jost-Italic.woff2') format('woff2'),
+        url('Jost-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('Jost-Regular.woff2') format('woff2'),
+        url('Jost-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('Jost-Light.woff2') format('woff2'),
+        url('Jost-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poiret One';
+    src: url('PoiretOne-Regular.woff2') format('woff2'),
+        url('PoiretOne-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
