@@ -197,14 +197,28 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         
     }
-
-
-
-
-
     // gallery popup конец
-
-
+    
+    
+    // burger menu 
+    const header_link = document.querySelector('.header-list')
+    const burger_menu = document.querySelector('.burger-menu');
+    if (document.documentElement.clientWidth < 1200) {
+        document.getElementById("about-bg__img").src = "./img/about-bg__lg.png";
+        burger_menu.onclick = function (e) {
+            e.preventDefault();
+            burger_menu.classList.toggle("burger-menu_active");
+            // console.log(burger_menu)
+            if (burger_menu.classList.contains("burger-menu_active")) {
+                header_link.style.display = "flex";
+            } else {
+                header_link.style.display = "none";
+            }
+        }
+    }
+    else {
+        document.getElementById("about-bg__img").src = "./img/about-img.png";
+    };
 
 
 

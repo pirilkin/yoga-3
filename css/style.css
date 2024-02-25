@@ -613,6 +613,7 @@ h3 {
 .header-list__link {
   font-size: 22px;
   color: white;
+  cursor: pointer;
 }
 
 .header-list__lang {
@@ -1117,6 +1118,18 @@ h3 {
   padding: 0 20px;
 }
 
+.form-socials__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .form-btn {
   color: white;
   padding: 12px 82px;
@@ -1492,6 +1505,11 @@ h3 {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+
+.burger-menu_active .header-list {
+  opacity: 1;
+  overflow: visible;
 }
 
 .swiper-slide .row {
@@ -2096,9 +2114,10 @@ h3 {
   }
 
   .header-list {
-    display: none;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    overflow: hidden;
+    opacity: 0;
   }
 
   .header-main__title {
@@ -2199,6 +2218,14 @@ h3 {
   .about-text {
     padding: 0 18px;
     font-size: 16px;
+  }
+
+  .form-socials__item {
+    padding: 0;
+  }
+
+  .form-socials__img {
+    max-width: 80%;
   }
 
   .slider-title__item {
