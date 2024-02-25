@@ -1,3 +1,6 @@
+<?php 
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -7,8 +10,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Yoga</title>
 
-  <link rel="stylesheet" href="./libs/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="./libs/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="./libs/bootstrap4/css/bootstrap.min.css">
+  
   <link href="libs/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.min.css">
@@ -676,6 +679,18 @@
             <h3 class="form-title">To get your first free lesson with me,
               send a request</h3>
             <div class="form-container">
+              <?php if(isset($_SESSION['sent'])): ?>
+              <div class="alert alert-info alert-dismissible fade show" role="alert">
+                 <b> <?php echo $_SESSION ['sent']; unset($_SESSION['sent']); ?> </b>
+           </div>
+           <?php endif; ?>
+           
+           <?php if(isset($_SESSION['notsent'])): ?>
+             
+           <div class="alert alert-danger alert-dismissible fade show" role="alert">
+               <b> <?php echo $_SESSION ['notsent']; unset($_SESSION['notsent']); ?> </b>
+           </div>
+           <?php endif; ?>
               <div class="form-block">
                 <form action="./mail/mail.php" class="form-block__item" method="post">
                   <div class="form-row">
@@ -821,11 +836,10 @@
     </footer>
     <div class="btn-up btn-up_hide"></div>
   </div>
-  <!-- <script src="libs/js/jquery.min.js"></script>
-  <script src="libs/js/lightbox.min.js"></script>
-  <script src="libs/js/jquery.waypoints.js"></script>
-  <script src="libs/js/jquery.counterup.js"></script>
-  <script src="libs/js/slick.js"></script> -->
+
+  
+  <script src="../libs/bootstrap4/js/popper.min.js"></script>
+	<script src="../libs/bootstrap4/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
