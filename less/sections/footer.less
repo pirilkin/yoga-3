@@ -146,16 +146,27 @@
     &-social {
         display: inline-flex;
         margin-bottom: 90px;
-
+        
         @media (max-width: 990px) {
             margin-bottom: 0;
         }
 
         &__item:not(:last-child) {
             padding-right: 40px;
+            @media (max-width: 650px) {
+                padding-right: 5px;
+            }
+        }
+        &__item{
+            @media (max-width: 650px) {
+                padding: 0 5px; 
+            }
         }
         &__img{
-            fill: red;
+            @media (max-width: 650px) {
+                max-width: 40px;
+            }
+            // fill: red;
         }
         &__icon {}
 

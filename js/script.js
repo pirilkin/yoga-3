@@ -202,7 +202,8 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // burger menu 
     const header_link = document.querySelector('.header-list')
-    const burger_menu = document.querySelector('.burger-menu');
+    const burger_menu = document.querySelector('.burger-menu_button');
+    const header_list = document.querySelector('.header-list');
     if (document.documentElement.clientWidth < 1200) {
         document.getElementById("about-bg__img").src = "./img/about-bg__lg.png";
         burger_menu.onclick = function (e) {
@@ -210,9 +211,12 @@ document.addEventListener('DOMContentLoaded', function () {
             burger_menu.classList.toggle("burger-menu_active");
             // console.log(burger_menu)
             if (burger_menu.classList.contains("burger-menu_active")) {
-                header_link.style.display = "flex";
+                // header_link.style.display = "flex";
+                header_list.classList.add('header-list__active');
             } else {
-                header_link.style.display = "none";
+                header_list.classList.remove('header-list__active');
+                // header_link.style.display = "none";
+                
             }
         }
     }

@@ -25,7 +25,7 @@
         width: 100%;
         align-items: center;
         padding: 20px 0px;
-
+        overflow: hidden;
         @media (max-width: 1440px) {
             padding: 20px 20px;
         }
@@ -60,8 +60,19 @@
             transition: 0.3s;
             overflow: hidden;
             opacity: 0;
+            transform: translateX(100%);
         }
-
+        &__active{
+            @media (max-width: 950px) {
+            opacity: 1;
+            transform: translateX(0%);
+           .header-list__item{
+            opacity: 1;
+            visibility:visible;
+           }
+        }
+            
+        }
 
         &__item {
             line-height: normal;
@@ -73,6 +84,7 @@
 
             @media (max-width: 1200px) {
                 margin-right: 40px;
+                // transform: translateX(400%);
             }
 
             @media (max-width: 950px) {
