@@ -1,5 +1,6 @@
 .popup{
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     // max-width: 1920px;
     margin: 0 auto;
     // background: rgba(240,224,255, 0.5);
@@ -11,31 +12,14 @@
     transform: translate(50%; 50%);
     width: 100%;
     transition: all 0.8s ease 0s;
-    // position: relative;
-    &-1{
-        // display: flex;
-        // display: none;
+    // overflow-y: auto;
+    // overflow-x: hidden;
+    &.open{
+        opacity: 1;
+        visibility:visible;
+        
     }
-    &-2{
-        // display: none;
-        // display: flex;
-    }
-    &-3{
-        // display: none;
-        // display: flex;
-    }    
-    &-4{
-        // display: none;
-        // display: flex;
-    }
-    &-5{
-        // display: none;
-        // display: flex;
-    }
-    &-6{
-        // display: none;
-        // display: flex;
-    }
+
     &-container{
         // max-width: 80%;
         margin: 0 auto;

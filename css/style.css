@@ -423,6 +423,7 @@ template {
   width: 60px;
   /* высота элемента */
   height: 50px;
+  z-index: 99;
 }
 
 .btn-up::before {
@@ -439,9 +440,16 @@ template {
 }
 
 body {
+  font-family: 'Jost';
+}
+
+body .lock {
+  overflow: hidden;
+}
+
+.wrapper {
   padding: 0px 70px 0 70px;
   background: #F0E0FF;
-  font-family: 'Jost';
 }
 
 header {
@@ -635,7 +643,7 @@ h3 {
   -webkit-transform: translate(50%, 50%);
   -ms-transform: translate(50%, 50%);
   transform: translate(50%, 50%);
-  z-index: 99;
+  z-index: 11;
   bottom: 0;
 }
 
@@ -743,8 +751,6 @@ h3 {
 
 .gallery-block {
   margin-bottom: 50px;
-  cursor: pointer;
-  opacity: 0.2s;
 }
 
 .gallery-title {
@@ -821,7 +827,7 @@ h3 {
 
 .gallery-btn__item {
   padding: 17px 49px;
-  background: #ADA2F2;
+  background: #7c4aab;
   color: #fff;
   font-size: 25px;
   -webkit-transition: 0.2s;
@@ -829,7 +835,7 @@ h3 {
 }
 
 .gallery-btn__item:hover {
-  background: #7c4aab;
+  background: #ADA2F2;
 }
 
 .gallery-img__left {
@@ -846,7 +852,7 @@ h3 {
   -webkit-transform: translate(50%, 50%);
   -ms-transform: translate(50%, 50%);
   transform: translate(50%, 50%);
-  z-index: 99;
+  z-index: 11;
 }
 
 .question {
@@ -1145,7 +1151,7 @@ h3 {
   -webkit-transform: translate(-50%, 0%);
   -ms-transform: translate(-50%, 0%);
   transform: translate(-50%, 0%);
-  z-index: 99;
+  z-index: 11;
 }
 
 .form-img__right {
@@ -1155,7 +1161,7 @@ h3 {
   -webkit-transform: translate(50%, 50%);
   -ms-transform: translate(50%, 50%);
   transform: translate(50%, 50%);
-  z-index: 99;
+  z-index: 11;
 }
 
 .form input[type="checkbox"]:checked,
@@ -1330,7 +1336,8 @@ h3 {
 }
 
 .popup {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   margin: 0 auto;
   z-index: 99;
   padding: 50px;
@@ -1343,6 +1350,11 @@ h3 {
   width: 100%;
   -webkit-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
 }
 
 .popup-container {
@@ -1780,7 +1792,7 @@ h3 {
 }
 
 @media (max-width: 1200px) {
-  body {
+  .wrapper {
     padding: 0px;
   }
 
@@ -1894,7 +1906,7 @@ h3 {
   }
 
   .gallery-btn__item:hover {
-    background: #ADA2F2;
+    background: #7c4aab;
   }
 
   .question-block {

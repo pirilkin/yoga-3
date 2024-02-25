@@ -31,6 +31,7 @@
     width: 60px;
     /* высота элемента */
     height: 50px;
+    z-index: 99;
     @media (max-width: 600px) {
         width: 50px;
         height: 40px;
@@ -58,9 +59,16 @@
     }
   }
 body {
+
+    font-family: 'Jost';
+
+    .lock{
+        overflow: hidden;
+    }
+}
+.wrapper{
     padding: 0px 70px 0 70px;
     background: #F0E0FF;
-    font-family: 'Jost';
     @media (max-width: 1200px) {
         padding: 0px;
     }
